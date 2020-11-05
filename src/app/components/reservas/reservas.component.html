@@ -1,0 +1,325 @@
+<div id="container" class="container">
+    <div id="head" class="head">
+        <h1>Nueva Reserva</h1>
+    </div>
+    <main>
+        <div id="form">
+            <form (ngSubmit)="guardarReserva()">
+                <h2> Nueva Reserva</h2>
+                <div>
+                    <label class="" for="select">Sesion</label>
+                    <select id="sesion" name="secion">
+                        <option value="-1">Elija la sesion</option>
+                        <option value="{{i}}" *ngFor="let sesion of sesiones; let i=index">{{sesion.horario}} - {{sesion.resolucion}}</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <fieldset>
+                        <legend>Elija su asiento:</legend>
+                        <div class="asiento-group">
+                            <table id="otro" type="checkbox" class="asientos-tab" cellpadding="1"
+                                cellspacing="1" height="278" width="923">
+                                <tbody>
+                                    <tr id="A">
+                                        <td style="text-align: center;">
+                                            <div class='cuadrante'>A</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoA0"
+                                                (click)="asientoStatus($event)">1</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoA1"
+                                                (click)="asientoStatus($event)">2</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoA2"
+                                                (click)="asientoStatus($event)">3</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoA3"
+                                                (click)="asientoStatus($event)">4</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoA4"
+                                                (click)="asientoStatus($event)">5</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoA5"
+                                                (click)="asientoStatus($event)">6</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoA6"
+                                                (click)="asientoStatus($event)">7</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoA7"
+                                                (click)="asientoStatus($event)">8</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoA8"
+                                                (click)="asientoStatus($event)">9</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoA9"
+                                                (click)="asientoStatus($event)">10</div>
+                                        </td>
+                                    </tr>
+                                    <tr id="B">
+                                        <td style="text-align: center;">
+                                            <div class='cuadrante'>B</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoB0"
+                                                (click)="asientoStatus($event)">1</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoB1"
+                                                (click)="asientoStatus($event)">2</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoB2"
+                                                (click)="asientoStatus($event)">3</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoB3"
+                                                (click)="asientoStatus($event)">4</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoB4"
+                                                (click)="asientoStatus($event)">5</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoB5"
+                                                (click)="asientoStatus($event)">6</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoB6"
+                                                (click)="asientoStatus($event)">7</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoB7"
+                                                (click)="asientoStatus($event)">8</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoB8"
+                                                (click)="asientoStatus($event)">9</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoB9"
+                                                (click)="asientoStatus($event)">10</div>
+                                        </td>
+                                    </tr>
+                                    <tr id="C">
+                                        <td style="text-align: center;">
+                                            <div class='cuadrante'>C</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoC0"
+                                                (click)="asientoStatus($event)">1</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoC1"
+                                                (click)="asientoStatus($event)">2</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoC2"
+                                                (click)="asientoStatus($event)">3</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoC3"
+                                                (click)="asientoStatus($event)">4</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoC4"
+                                                (click)="asientoStatus($event)">5</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoC5"
+                                                (click)="asientoStatus($event)">6</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoC6"
+                                                (click)="asientoStatus($event)">7</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoC7"
+                                                (click)="asientoStatus($event)">8</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoC8"
+                                                (click)="asientoStatus($event)">9</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoC9"
+                                                (click)="asientoStatus($event)">10</div>
+                                        </td>
+                                    </tr>
+                                    <tr id="D">
+                                        <td style="text-align: center;">
+                                            <div class='cuadrante'>D</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoD0"
+                                                (click)="asientoStatus($event)">1</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoD1"
+                                                (click)="asientoStatus($event)">2</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoD2"
+                                                (click)="asientoStatus($event)">3</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoD3"
+                                                (click)="asientoStatus($event)">4</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoD4"
+                                                (click)="asientoStatus($event)">5</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoD5"
+                                                (click)="asientoStatus($event)">6</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoD6"
+                                                (click)="asientoStatus($event)">7</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoD7"
+                                                (click)="asientoStatus($event)">8</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoD8"
+                                                (click)="asientoStatus($event)">9</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoD9"
+                                                (click)="asientoStatus($event)">10</div>
+                                        </td>
+                                    </tr>
+                                    <tr id="E">
+                                        <td style="text-align: center;">
+                                            <div class='cuadrante'>E</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoE0"
+                                                (click)="asientoStatus($event)">1</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoE1"
+                                                (click)="asientoStatus($event)">2</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoE2"
+                                                (click)="asientoStatus($event)">3</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoE3"
+                                                (click)="asientoStatus($event)">4</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoE4"
+                                                (click)="asientoStatus($event)">5</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoE5"
+                                                (click)="asientoStatus($event)">6</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoE6"
+                                                (click)="asientoStatus($event)">7</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoE7"
+                                                (click)="asientoStatus($event)">8</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoE8"
+                                                (click)="asientoStatus($event)">9</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoE9"
+                                                (click)="asientoStatus($event)">10</div>
+                                        </td>
+                                    </tr>
+                                    <tr id="F">
+                                        <td style="text-align: center;">
+                                            <div class='cuadrante'>F</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoF0"
+                                                (click)="asientoStatus($event)">1</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoF1"
+                                                (click)="asientoStatus($event)">2</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoF2"
+                                                (click)="asientoStatus($event)">3</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoF3"
+                                                (click)="asientoStatus($event)">4</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoF4"
+                                                (click)="asientoStatus($event)">5</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoF5"
+                                                (click)="asientoStatus($event)">6</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoF6"
+                                                (click)="asientoStatus($event)">7</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoF7"
+                                                (click)="asientoStatus($event)">8</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoF8"
+                                                (click)="asientoStatus($event)">9</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div class='asientoLibre' id="asientoF9"
+                                                (click)="asientoStatus($event)">10</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="botonJuntos">
+                    <button type="submit" class="azul"> Guardar </button>
+                    <button type="button" class="rojo" (click)="cancelar()"> Cancelar </button>
+                </div>
+            </form>
+
+            <div id="tabla">
+                <h2>Reservas Cadastradas</h2>
+                <div class="div-tabla">
+                    <table class="tabla">
+                        <thead>
+                            <th>Filme</th>
+                            <th>Data</th>
+                            <th>Inicio</th>
+                            <th>Doblado/Subtitulado</th>
+                            <th>Sala</th>
+                            <th>3D/2D</th>
+
+                        </thead>
+
+                        <tbody id="tabla-cuerpo"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

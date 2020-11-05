@@ -1,0 +1,41 @@
+<div class="limiter">
+    <div class="container">
+      <img class="pic" src="public/imgs/signup.png" alt="IMG">
+      <div class="wrap">
+        <form class="form validate-form" (ngSubmit)="onSignupUser()">
+          <span class="form-title">
+            Registrarse
+          </span>
+          <div class="wrap-input">
+            <input class="input" name="name" placeholder="Nombre" [(ngModel)]="name">
+            <span class="focus-input"></span>
+            <span class="symbol-input">
+              <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="wrap-input">
+            <input class="input" name="username" placeholder="Nombre de Usuario" [(ngModel)]="username">
+            <span class="focus-input"></span>
+            <span class="symbol-input">
+              <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="wrap-input">
+              <input class="input" name="password" type="password" placeholder="Contraseña" [(ngModel)]="password">
+              <span class="focus-input"></span>
+              <span class="symbol-input">
+                <i class="fa fa-lock fa-lg" aria-hidden="true"></i>
+              </span>
+            </div>
+  
+          <div class="container-form-btn">
+            <button type="submit" class="main-button icon-button">
+              Registrarse
+            </button>
+          </div>
+          <a class="btn btn-link col-md-12 mt-2" [routerLink]="['/login']">Ya tengo cuenta.</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,17 @@
+<div class="limiter">
+    <div class="container-login">
+        <div class="wrap-login">
+            <div class="login-pic" data-tilt>
+                <img src="{{pelicula.foto1}}" alt="IMG">
+            </div>
+            <form class="mt-2">
+                <div class="info-text">
+                    <p class="title">{{pelicula.nombre}}</p>
+                    <p class="content">{{pelicula.sinopsis}}</p>
+                    <p class="footer">{{pelicula.genero}}</p>
+                </div>
+                <button class="btn btn-dark col-md-6" type="button" [routerLink]="[ '/reservas', pelicula._id]">Reservar</button>
+            </form>
+        </div>
+    </div>
+</div>

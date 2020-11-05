@@ -1,0 +1,25 @@
+<div id="box" class="main-container">
+  <div class="wrap-container">
+    <p class="titulo">Cartelera</p>
+    <div *ngFor="let chunks of peliculas">
+      <div class="row">
+        <div class="col-md-4 mb-2 mt-4" [routerLink]="['/peliculas/', pelicula._id]" *ngFor="let pelicula of chunks">
+          <div class="portfolio">
+            <div class="portfolio-item mx-auto">
+              <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="portfolio-item-caption-content text-center text-white">
+                  <div class="info-text">
+                    <p class="title">{{pelicula.nombre}}</p>
+                    <p class="content">{{pelicula.sinopsis}}</p>
+                    <p class="footer">{{pelicula.genero}}</p>
+                  </div>
+                </div>
+              </div>
+              <img class="img-fluid" src="{{pelicula.foto1}}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

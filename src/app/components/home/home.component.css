@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap-container {
+  width: 950px;
+  background: #0000;
+  border-radius: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  flex-wrap: wrap;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.titulo {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #202633;
+  font-size: 30px;
+  margin: 25px 0px;
+  margin-bottom: 100px;
+  font-family: 'Lato', sans-serif;
+}
+
+.info-text{
+	padding: 10px;
+}
+
+.info-text p{
+	color: #ffffff;
+}
+
+.info-text .title{
+	font-weight: bold;
+	font-size: medium;
+}
+
+.info-text .content{
+	font-size: small;
+	color: #dddddd;
+}
+
+.info-text .footer{
+	font-size: x-small;
+	color: #dddddd;
+	margin-top: auto;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: 450px;
+}
+
+.portfolio .portfolio-item {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-item .portfolio-item-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color:#000;
+}
+
+.portfolio .portfolio-item .portfolio-item-caption:hover {
+  opacity: 1;
+}
+
+.portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+  font-size: 1.5rem;
+}
